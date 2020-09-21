@@ -7,17 +7,62 @@ body {
 .header {
   background-color: white;
   width: 100%;
-  height: 100px;
+  height: 85px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 15px;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+
 }
 .logotipe {
   max-height: 80px;
 }
+.burger__logotipe{
+  z-index: 4;
+}
+.burger__logotipe img{
+  width:33px;
+  z-index: 4;
+  display: none;
+}
+.burger__menu{
+  position: fixed;
+  background: rgba(241, 243, 244, 0.9);
+  z-index: 3;
+  top: 0;
+  /* left:0; */
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.burger__menu.is-active {
+  right: 0;
+}
+.burger__menu ol {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.burger__menu li{
+  padding: 10px 0 0; 
+}
+.link {
+  font-size: 1.8em;
+  text-decoration: none;
+  color: rgba(48, 57, 96);
+  font-weight: 700;
+}
+.burger{
+  margin-top:15px;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -38,8 +83,8 @@ body {
 }
 .hero {
   background-image: url(https://www.capitalaires.com/assets/images/Mantenimiento.jpg);
-  height: calc(100vh - 100px);
-  background-position: initial;
+  height: calc(100vh - 85px);
+  background-position: center;
   background-repeat: no-repeat;
   min-width: 100vw;
   background-size: cover;
@@ -48,13 +93,13 @@ body {
 }
 .hero__presentacion {
   background-color: rgba(48, 57, 96, 0.8);
-  height: 499px;
-  width: 570px;
+  height: 90%;
+  width: 60%;
   padding: 25px 50px;
   box-sizing: border-box;
 }
 .title__h1 {
-  font-size: 55px;
+  font-size: 45px;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -62,7 +107,7 @@ body {
 }
 .title__h2 {
   color: white;
-  font-size: 27px;
+  font-size: 24px;
   margin-top: 10px;
   font-weight: 900;
 }
@@ -78,12 +123,12 @@ body {
 }
 .contact__button {
   width: 160px;
-  height: 50px;
+  height: 40px;
   background-color: #f8b24f;
   border: none;
   border-radius: 5px;
   color: #303960;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   font-family: "times new roman", sans-serif;
 }
@@ -104,7 +149,7 @@ body {
   margin-bottom: 50px;
 }
 .services__title h2 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   color: white;
   margin: 0;
@@ -127,15 +172,19 @@ body {
 .area {
   box-sizing: border-box;
   width: 400px;
+  min-width: 320px;
   background: white;
   padding: 40px 25px 10px;
   margin: 30px 10px;
   height: 320px;
+ 
   text-align: center;
   position: relative;
 }
 .area__image {
-  width: 400px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
   position: absolute;
   top: -45px;
   left: 0;
@@ -160,11 +209,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  min-height: 600px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 .texto {
   width: 450px;
-  margin: 0 100px;
+  margin: 0 50px;
 }
 .texto h1 {
   text-align: center;
@@ -186,10 +237,10 @@ body {
 }
 .products h1 {
   font-weight: 700;
-  font-size: 45px;
+  font-size: 35px;
 }
 .products p {
-  padding: 0 150px;
+  padding: 0 40px;
   font-weight: 900;
   opacity: 0.8;
   font-size: 18px;
@@ -199,10 +250,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .product {
   box-shadow: 0 0 3px;
-  margin: 20px;
+  margin: 20px 10px;;
   width: 350px;
   background: white;
   padding: 10px 15px;
@@ -250,7 +302,7 @@ body {
   color: white;
 }
 .projects h1 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   text-align: center;
   margin: 0;
@@ -353,6 +405,9 @@ body {
   width: 100%;
   display: flex;
   text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+    justify-content: center;
   box-shadow: 2px 2px 5px #0741ad;
 }
 .contactUs h3 {
@@ -365,6 +420,7 @@ body {
 .form {
   box-sizing: border-box;
   width: 50%;
+  min-width:350px;
   padding: 20px 50px;
   text-align: initial;
 }
@@ -403,7 +459,7 @@ body {
 }
 
 .form h4 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 0;
   color: black;
@@ -412,11 +468,12 @@ body {
 
 .maps {
   width: 50%;
+  min-width:350px;
   box-sizing: border-box;
   padding-top: 20px;
 }
 .maps h4 {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 0;
   font-weight: 700;
   color: black;
@@ -436,7 +493,7 @@ body {
 .redes {
   text-align: center;
   background-color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   padding: 5px 0 20px;
 }
@@ -469,4 +526,101 @@ body {
   opacity: 0.8;
   padding: 10px;
   text-align: center;
+}
+
+/* .burger__menu{
+  height:100vh;
+  width: 100vw;
+  background:black;
+  position:absolute;
+  top:0;
+  left:0;
+} */
+@media (max-width: 920px){
+  .hero__presentacion{
+    width:100%;
+  }
+}
+@media (max-width: 768px) {
+  body{
+    margin-top: 85px;
+  }
+  .product{
+    width:450px;
+    margin: 20px 5px;
+  }
+  .projects{
+    padding: 20px 5px;
+  }
+  .menu{
+    display:none;
+  }
+  .burger__logotipe img{
+    display:block;
+  }
+  .hero{
+    height: calc(100vh - 85px);
+    padding: 55px 95px 0;
+  }
+  .hero__presentacion{
+    height: 75%;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .header{
+    position:fixed;
+    top:0;
+    left:0;
+  }
+}
+@media (max-width: 480px) {
+  body{
+    margin-top: 60px;
+  }
+  .header{
+    height:60px;
+    justify-content: space-between;
+    position:fixed;
+    top:0;
+    left:0;
+  }
+
+  .logotipe{
+    height:55px;
+  }
+  .hero{
+    padding: 0;
+    height: calc(100vh - 60px);
+  }
+  .hero__presentacion{
+    background-color: rgba(48, 57, 96, 0.3);
+    width: 100vw;
+    height:100vh;
+    padding: 110px 30px 0;
+  }
+  .title__h2{
+    margin-top: 25px;;
+  }
+  .services__title h4{
+    margin:10px;
+  }
+  .texto{
+    margin: 0 20px;
+  }
+  .item{
+    width: 220px;
+    height: 300px;
+  }
+  .partners{
+    padding: 0 0 30px;
+  }
+  .partners img{
+    width: 300px;
+  }
+  .form{
+    padding: 15px;
+  }
+  .maps h3{
+    margin: 15px 44px;
+  }
 }

@@ -19,6 +19,27 @@
       <div>
         <img class="logotipe" src="./images/logo.png" alt="" />
       </div>
+
+      <div class='burger__logotipe' id='burger' />
+        <img src="./images/menu.svg" alt="">
+      </div>
+
+      <nav class="burger__menu" id='menu'>
+        <ol>
+              <a href="#" class="link" id="home"><li>Home</li></a>
+          
+              <a href="#services" class="link" id="servicios"><li>Servicios</li></a>
+
+              <a href="#aboutUs" class="link" id="sobreNosotros"><li>Sobre Nosotros</li></a>
+
+              <a href="#products" class="link" id="productos" ><li>Productos</li></a>
+
+              <a href="#projects" class="link" id="proyectos"><li>Proyectos</li></a>
+
+                <a href="#contact" class="link"  id="contacto" ><button class="contact__button burger">contact</button> </a>
+        </ol>
+     </nav>
+
       <ul class="menu">
         <a href="#"><li>Home</li></a>
         <a href="#services"><li>Servicios</li></a>
@@ -32,7 +53,7 @@
         >
       </ul>
     </header>
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="hero__presentacion">
         <div class="title">
           <h1 class="title__h1">
@@ -128,14 +149,6 @@
       </div>
     </section>
     <section class="aboutUs" id="aboutUs">
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/q1XANuxVAA8"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
 
       <div class="texto">
         <h1>Sobre Nosotros</h1>
@@ -156,6 +169,14 @@
           </span>
         </p>
       </div>
+      <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/q1XANuxVAA8"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
     </section>
     <section class="products" id="products">
       <h1>Productos</h1>
@@ -293,4 +314,77 @@
       <p>Desarrollado a mano por Adrian Moreno.</p>
     </footer>
   </body>
+  <script >
+    const home = document.getElementById('home');
+    const servicios = document.getElementById('servicios');
+    const aboutUs = document.getElementById('sobreNosotros');
+    const products = document.getElementById('productos');
+    const projects = document.getElementById('proyectos');
+    const contact = document.getElementById('contacto');
+
+    const menu = document.getElementById('menu');
+    const burger = document.getElementById('burger');
+
+    console.log(servicios)
+      home.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+      
+      servicios.addEventListener('click', function(){
+        console.log(menu.classList.contains)
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+
+      aboutUs.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+
+      products.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+
+      projects.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+      
+      contact.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+
+      burger.addEventListener('click', function(){
+      if(menu.classList.contains('is-active')){
+        menu.classList.remove('is-active');
+      }else{
+        menu.classList.add('is-active');
+      }
+      } );
+
+
+
+      
+  </script>
 </html>
