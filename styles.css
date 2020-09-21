@@ -300,6 +300,7 @@ body {
   width: 100%;
   padding: 20px;
   color: white;
+  box-sizing:border-box;
 }
 .projects h1 {
   font-size: 35px;
