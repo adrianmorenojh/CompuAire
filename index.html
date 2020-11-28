@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>CompuAire</title>
   </head>
   <body>
@@ -53,7 +54,8 @@
         >
       </ul>
     </header>
-    <section class="hero" id="home">
+    <section class="hero" id="home"  data-aos="fade-up"
+    data-aos-duration="2000">
       <div class="hero__presentacion">
         <div class="title">
           <h1 class="title__h1">
@@ -63,7 +65,7 @@
             Desde 2010 brindando el mejor servicio en aires acondicionados.
           </h2>
         </div>
-        <div class="info">
+        <div class="info" data-aos="fade-left">
           <h4 class="info__h4">
             Expertos en el area del aire acondicionado. Venta, distribucion,
             mantenimiento y mucho mas!
@@ -85,7 +87,7 @@
         </h4>
       </div>
       <div class="area__container">
-        <div class="area">
+        <div class="area"  data-aos="fade-right" data-aos-duration="1000">
           <div class="area__image">
             <img src="./images/asesoria.svg" class="icon" alt="" />
           </div>
@@ -98,7 +100,7 @@
             equipos.
           </p>
         </div>
-        <div class="area">
+        <div class="area" data-aos="fade-left" data-aos-duration="1000">
           <div class="area__image">
             <img src="./images/mantenimiento.svg" class="icon" alt="" />
           </div>
@@ -111,7 +113,7 @@
             mantenimiento correctivo y preventivo de aires acondicionados.
           </p>
         </div>
-        <div class="area">
+        <div class="area" data-aos="fade-right" data-aos-duration="1000">
           <div class="area__image">
             <img src="./images/diseño.svg" class="icon" alt="" />
           </div>
@@ -123,7 +125,7 @@
             cumplan la eficacia del sistema que se requieran.
           </p>
         </div>
-        <div class="area">
+        <div class="area" data-aos="fade-left" data-aos-duration="1000">
           <div class="area__image">
             <img src="./images/instalacion.svg" class="icon" alt="" />
           </div>
@@ -135,7 +137,7 @@
             para cumplir todas sus necesidades.
           </p>
         </div>
-        <div class="area">
+        <div class="area" data-aos="fade-up" data-aos-duration="1000">
           <div class="area__image">
             <img src="./images/ventas.svg" class="icon venta" alt="" />
           </div>
@@ -148,7 +150,7 @@
         </div>
       </div>
     </section>
-    <section class="aboutUs" id="aboutUs">
+    <section class="aboutUs" id="aboutUs" >
 
       <div class="texto">
         <h1>Sobre Nosotros</h1>
@@ -175,10 +177,13 @@
       src="https://www.youtube.com/embed/q1XANuxVAA8"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowfullscreen data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="300"
+      data-aos-offset="100"
     ></iframe>
     </section>
-    <section class="products" id="products">
+    <section class="products" id="products"  >
       <h1>Productos</h1>
       <p>
         La gama de productos que fabricamos y proporcionamos a nuestros clientes
@@ -186,8 +191,8 @@
         suministros necesarios para ingeniería, fabricación y otras esferas
         industriales.
       </p>
-      <div class="products__container">
-        <div class="product">
+      <div class="products__container" >
+        <div class="product" data-aos="fade-right"  data-aos-duration="1000">
           <h1>Aires acondicionado</h1>
           <p>
             Por nuestro desempeño en el mercado hemos logrado ser distribuidores
@@ -201,7 +206,7 @@
             alt=""
           />
         </div>
-        <div class="product">
+        <div class="product" data-aos="fade-up"  data-aos-duration="1000">
           <h1>Tuberia de Cobre</h1>
           <p>
             Contamos con gran variedad en tuberia de cobre para la instalacion
@@ -212,7 +217,7 @@
             alt=""
           />
         </div>
-        <div class="product">
+        <div class="product" data-aos="fade-left"  data-aos-duration="1000" >
           <h1>Suministros de repuestos</h1>
           <p>
             Contamos con tanto con suministros electricos como repuestos para
@@ -281,9 +286,8 @@
     </section>
     <div class="contactUs" id="contact">
       <form class="form">
-        <h4>Contactanos!</h4>
-        <h3>Nos puedes encontrar en diferentes redes como @compuaireca</h3>
-        <h3>O denjanos un mensaje y nosotros te responderemos en seguida.</h3>
+        <h2>Contactanos!</h2>
+        <h3>envianos un mensaje y te responderemos de inmediato.</h3>
         <input type="text" placeholder="Name" />
         <input type="email" placeholder="Email" />
         <textarea class="text" placeholder="Escribe Tu Mensaje"></textarea>
@@ -303,7 +307,6 @@
       </div>
     </div>
     <div class="redes">
-      <p>nuestras redes</p>
       <div class="icons">
         <img class="redes__icon" src="./images/instagram.svg" alt="" />
         <img class="redes__icon" src="./images/whattsap.svg" alt="" />
@@ -311,10 +314,12 @@
       </div>
     </div>
     <footer class="footer">
-      <p>Desarrollado a mano por Adrian Moreno.</p>
+      <p>Desarrollado por Adrian Moreno.</p>
     </footer>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script >
+     AOS.init();
     const home = document.getElementById('home');
     const servicios = document.getElementById('servicios');
     const aboutUs = document.getElementById('sobreNosotros');
